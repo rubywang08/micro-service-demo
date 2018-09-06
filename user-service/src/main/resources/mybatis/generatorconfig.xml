@@ -4,10 +4,10 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
     <context id="demo_tables01" targetRuntime="MyBatis3">
-        <jdbcConnection driverClass="${sharding.jdbc.datasource.ds0.driver-class-name}"
-                        connectionURL="${sharding.jdbc.datasource.ds0.url}"
-                        userId="${sharding.jdbc.datasource.ds0.username}"
-                        password="${sharding.jdbc.datasource.ds0.password}">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/test0?useUnicode=true&amp;characterEncoding=utf-8"
+                        userId="root"
+                        password="admin">
         </jdbcConnection>
 
         <javaModelGenerator targetPackage="com.my.entity" targetProject="MAVEN">
