@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="demo_tables01" targetRuntime="MyBatis3">
+        <jdbcConnection driverClass="${sharding.jdbc.datasource.ds0.driver-class-name}"
+                        connectionURL="${sharding.jdbc.datasource.ds0.url}"
+                        userId="${sharding.jdbc.datasource.ds0.username}"
+                        password="${sharding.jdbc.datasource.ds0.password}">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.my.entity" targetProject="MAVEN">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.my.repository" targetProject="MAVEN">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.my.repository" targetProject="MAVEN">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <table tableName="users" domainObjectName="Customer" enableCountByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false" enableUpdateByExample="false">
+        </table>
+
+    </context>
+</generatorConfiguration>
